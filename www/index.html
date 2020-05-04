@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Hello wasm-pack!</title>
+  <style>
+    body {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    #main {
+      justify-content: center;
+    }
+
+    #fps {
+      white-space: pre;
+      font-family: monospace;
+    }
+
+    .width-height input {
+      width: 60px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Game of Life!</h1>
+  <!-- <div>
+    <form id="context-type">
+      <input name="type_name" type="radio" value="webgl">WebGL</input>
+      <input name="type_name" type="radio" checked="checked" value="2d">2D</input>
+    </form>
+  </div> -->
+  <div class="width-height">
+    <label>width:</label>
+    <input id="number-width" type="number" />
+    <label>height:</label>
+    <input id="number-height" type="number" />
+  </div>
+  <div>
+    <label title="">update ticks:</label>
+    <input id="update-ticks" type="range" />
+    <span id="ticks-value"></span>
+    <span style="width: 10px;"></span>
+  </div>
+  <div id="buttons">
+    <button id="play-pause">Play</button>
+    <button id="reset-universe">Reset</button>
+    <button id="set-all-dead">All Dead</button>
+  </div>
+  <div id="fps"></div>
+  <div id="main">
+    <canvas id="game-of-life-canvas"></canvas>
+  </div>
+  <!-- <noscript>This page contains webassembly and javascript content, please enable javascript in your browser.</noscript> -->
+  <script src="./bootstrap.js"></script>
+</body>
+
+</html>
