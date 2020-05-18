@@ -29,7 +29,8 @@ Rust and WebAssembly
         * `headless`
 * `bench` 属性を関数に付けると、 `cargo bench` によって`test` より高度な実行プロファイリングができる。
     * `#![feature(test)]` 属性を付ける必要があり、この機能を使用するには `cargo +nightly bench` という風に nightly 指定が必要。
-    * Rust のデフォルトを stable に保った状態で nightly でベンチマークを実行したいときは、下記を参考にすればよい。
+    * Rust のデフォルトを stable に保った状態で nightly でベンチマークを実行したいときは、次のようにする。
+        * `rustup run nightly cargo bench`
         * 参考：https://sioyaki.com/entry/2019/08/29/141805
 * コードを作成するときには次の点を考慮する必要がある。
     * パフォーマンス
